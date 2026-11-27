@@ -1,0 +1,15 @@
+import unittest,technical as t
+class Technical(unittest.TestCase):
+ def setUp(self):self.d=dict(url='https://example.test/',html='<title>Test</title><meta name="robots" content="noindex"><link rel="canonical" href="/"><h1>Test</h1>')
+ def test_audit(self):self.assertEqual(t.audit(self.d)['titles'],['Test'])
+ def test_index(self):self.assertTrue(t.indexability(self.d)['noindex'])
+ def test_canonical(self):self.assertTrue(t.canonical(self.d)['self_referencing'])
+ def test_mobile(self):self.assertEqual(t.mobile(self.d)['viewport'],[])
+ def test_schema(self):self.assertFalse(t.schema(dict(html='<script type="application/ld+json">bad</script>'))[0]['valid_json'])
+ def test_graph(self):self.assertEqual(t.graph([self.d])['orphan_candidates'],[self.d['url']])
+ def test_performance(self):self.assertEqual(t.performance(dict(lcp_ms=2500))['lcp_ms'],'good')
+ def test_rendering(self):self.assertEqual(t.rendering(dict(url=self.d['url'],before_html='',after_html=self.d['html']))['after']['h1_count'],1)
+ def test_sitemap(self):self.assertEqual(t.sitemap('<urlset><url><loc>https://a.test</loc></url></urlset>')['urls'],['https://a.test'])
+ def test_redirects(self):self.assertTrue(t.redirects({'a':'b','b':'a'})[0]['loop'])
+ def test_hreflang(self):self.assertFalse(t.hreflang([dict(url='a',alternates={'fr':'b'})])[0]['reciprocal'])
+ def test_migration(self):self.assertEqual(t.migration(dict(old=['a'],new=['b'],mapping={}))['unmapped'],['a'])

@@ -1,0 +1,1095 @@
+{
+  "version": "1.0.0-rc.1",
+  "skills": [
+    {
+      "id": "competitor-intelligence",
+      "dependencies": [],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "competitors"
+    },
+    {
+      "id": "keyword-intelligence",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "keywords"
+    },
+    {
+      "id": "technical-audit",
+      "dependencies": [],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "audit"
+    },
+    {
+      "id": "architecture",
+      "dependencies": [
+        "keyword-intelligence",
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "graph"
+    },
+    {
+      "id": "content",
+      "dependencies": [
+        "keyword-intelligence"
+      ],
+      "modes": [
+        "architect",
+        "implement"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "ai-search",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "architect",
+        "audit"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "authority",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "audit",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "backlinks"
+    },
+    {
+      "id": "specialized",
+      "dependencies": [
+        "architecture"
+      ],
+      "modes": [
+        "architect",
+        "implement"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "analytics",
+      "dependencies": [],
+      "modes": [
+        "monitor",
+        "audit"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "release-gate",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "implement"
+      ],
+      "status": "offline",
+      "entrypoint": "release_checks"
+    },
+    {
+      "id": "monitoring",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "search-intent",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "intent"
+    },
+    {
+      "id": "serp-intelligence",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "serp"
+    },
+    {
+      "id": "market-intelligence",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "markets"
+    },
+    {
+      "id": "trend-discovery",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "changes"
+    },
+    {
+      "id": "gap-analysis",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "gaps"
+    },
+    {
+      "id": "opportunity-scoring",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "discovery",
+        "architect",
+        "audit"
+      ],
+      "status": "offline",
+      "entrypoint": "score"
+    },
+    {
+      "id": "competitor-monitoring",
+      "dependencies": [
+        "competitor-intelligence"
+      ],
+      "modes": [
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "changes"
+    },
+    {
+      "id": "crawl-indexability",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "indexability"
+    },
+    {
+      "id": "internal-linking",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "graph"
+    },
+    {
+      "id": "schema-engineering",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "schema"
+    },
+    {
+      "id": "performance-optimization",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "performance"
+    },
+    {
+      "id": "javascript-seo",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "rendering"
+    },
+    {
+      "id": "canonical-management",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "canonical"
+    },
+    {
+      "id": "sitemap-engineering",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "sitemap"
+    },
+    {
+      "id": "redirect-management",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "redirects"
+    },
+    {
+      "id": "international-seo",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "hreflang"
+    },
+    {
+      "id": "mobile-seo",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "mobile"
+    },
+    {
+      "id": "website-migration",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "migration"
+    },
+    {
+      "id": "seo-security",
+      "dependencies": [
+        "technical-audit"
+      ],
+      "modes": [
+        "audit",
+        "implement",
+        "architect"
+      ],
+      "status": "offline",
+      "entrypoint": "rendering"
+    },
+    {
+      "id": "topical-authority",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "coverage"
+    },
+    {
+      "id": "topic-clustering",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "on-page-optimization",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "metadata-engineering",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "metadata"
+    },
+    {
+      "id": "content-gap",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "coverage"
+    },
+    {
+      "id": "content-brief",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "content-quality",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "content-refresh",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "refresh"
+    },
+    {
+      "id": "keyword-cannibalization",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "cannibalization"
+    },
+    {
+      "id": "semantic-seo",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "programmatic-seo",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "content-pruning",
+      "dependencies": [
+        "content"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "geo",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "ai-visibility",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "visibility"
+    },
+    {
+      "id": "entity-optimization",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "citation-optimization",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "claim_sources"
+    },
+    {
+      "id": "ai-crawler-management",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "knowledge-graph",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "graph_references"
+    },
+    {
+      "id": "brand-mention-intelligence",
+      "dependencies": [
+        "ai-search"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "link-opportunity",
+      "dependencies": [
+        "authority"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "prospects"
+    },
+    {
+      "id": "digital-pr",
+      "dependencies": [
+        "authority"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "brand-authority",
+      "dependencies": [
+        "authority"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "eeat-audit",
+      "dependencies": [
+        "authority"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "backlink-risk",
+      "dependencies": [
+        "authority"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "citation-management",
+      "dependencies": [
+        "authority"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "listings"
+    },
+    {
+      "id": "saas-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "saas"
+      ]
+    },
+    {
+      "id": "ecommerce-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "catalog_checks",
+      "website_types": [
+        "ecommerce"
+      ]
+    },
+    {
+      "id": "marketplace-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "catalog_checks",
+      "website_types": [
+        "marketplace"
+      ]
+    },
+    {
+      "id": "local-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "local"
+      ]
+    },
+    {
+      "id": "directory-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "catalog_checks",
+      "website_types": [
+        "directory"
+      ]
+    },
+    {
+      "id": "membership-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "membership"
+      ]
+    },
+    {
+      "id": "portfolio-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "portfolio"
+      ]
+    },
+    {
+      "id": "personal-brand-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "personal-brand"
+      ]
+    },
+    {
+      "id": "startup-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "startup"
+      ]
+    },
+    {
+      "id": "image-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "media_checks"
+    },
+    {
+      "id": "video-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "media_checks"
+    },
+    {
+      "id": "app-store-optimization",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "app"
+      ]
+    },
+    {
+      "id": "news-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "news"
+      ]
+    },
+    {
+      "id": "multilingual-seo",
+      "dependencies": [
+        "specialized"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference",
+      "website_types": [
+        "multilingual"
+      ]
+    },
+    {
+      "id": "seo-analytics",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "metrics"
+    },
+    {
+      "id": "search-console-intelligence",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "compare_metrics"
+    },
+    {
+      "id": "conversion-intelligence",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "metrics"
+    },
+    {
+      "id": "seo-forecasting",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "forecast"
+    },
+    {
+      "id": "seo-monitoring",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "compare_metrics"
+    },
+    {
+      "id": "seo-reporting",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "seo-experimentation",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "seo-performance-attribution",
+      "dependencies": [
+        "analytics"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "seo-regression-testing",
+      "dependencies": [
+        "release-gate"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "regressions"
+    },
+    {
+      "id": "seo-compliance",
+      "dependencies": [
+        "release-gate"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "seo-implementation-orchestrator",
+      "dependencies": [
+        "release-gate"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "reference"
+    },
+    {
+      "id": "seo-documentation-manager",
+      "dependencies": [
+        "release-gate"
+      ],
+      "modes": [
+        "audit",
+        "architect",
+        "implement",
+        "monitor"
+      ],
+      "status": "offline",
+      "entrypoint": "release_checks"
+    }
+  ]
+}
