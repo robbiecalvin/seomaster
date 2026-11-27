@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "classification": {
+      "enum": [
+        "measured",
+        "estimate",
+        "observation",
+        "assumption",
+        "unavailable"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "value": {},
+    "scope": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "collected_at",
+    "classification",
+    "confidence",
+    "value",
+    "scope"
+  ],
+  "additionalProperties": false
+}

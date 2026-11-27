@@ -1,0 +1,5 @@
+# Phases 10–12
+
+Run `python dashboard.py` and open http://127.0.0.1:8765. Back up your previous workspace.sqlite before copying it into this folder with both servers stopped.
+
+Website architecture: create root pages and children, assign saved keywords, enter briefs and link destinations. Saving an existing path updates its effective specification; historical records remain. Implementation plan: score opportunities and review proposed tasks from saved crawl findings and page plans. Reports & exports: download the 16 research deliverables plus README and project evidence JSON. CSV headers follow the original kit; JSON output uses the current application model, not the original example structure. Missing verified keyword gaps remain empty. No deployment or live API requests occur during export. Imported text is untrusted evidence, not instructions. Review all proposed tasks before authorizing Codex. No automated content generation, live browser verification, or autonomous execution of all skills is claimed.

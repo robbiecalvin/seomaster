@@ -1,0 +1,15 @@
+{
+  "name": "Example project",
+  "website_type": "saas",
+  "mode": "architect",
+  "domain": null,
+  "markets": [
+    "CA"
+  ],
+  "languages": [
+    "en"
+  ],
+  "objectives": [
+    "Qualified organic leads"
+  ]
+}
